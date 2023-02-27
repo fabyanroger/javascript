@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(49, 49, 36);
+            color: white;
+            font: normal 16pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        var corpo = window.document.body
+
+        //pode ocultar o window
+        var p1 = window.document.getElementsByTagName('p')[1]
+        //window.document.write(p1.innerText)
+
+        //ao invés de escrever na tela, posso alterar a cor do meu p[1]
+        //p1.style.color = 'blue'
+
+        //mudando o body
+        //corpo.style.background = 'black'
+
+        //alert(p1.innerHTML)
+        //innerText pega pega o texto sem os filhos, sem a formatação, pega simplismente o texto
+        //innerHTML pega o HTML inteiro, inclusive com as tags filhas.
+        //var d = window.document.getElementsByName('msg')[0]
+        //d.innerText = 'Olá!'
+
+        var d = document.querySelector('div#msg')
+        //toda div é representada por uma # e toda classe é prepresentada por um .
+        d.style.background = 'blue'
+    </script>
+</body>
+</html>
